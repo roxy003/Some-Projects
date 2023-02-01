@@ -17,7 +17,7 @@ class Calculator {
 
   appendNumber(number) {
     if (number === "." && this.currentOperand.includes(".")) return;
-    this.currentOperand = this.currentOperand.toString() + toString();
+    this.currentOperand = this.currentOperand.toString() + number.toString();
   }
 
   chooseOperation(operation) {
@@ -61,7 +61,7 @@ class Calculator {
 
   getDisplayNumber(number) {
     const stringNumber = number.toString();
-    const interDigits = parseFloat(stringNumber.split(".")[0]);
+    const integerDigits = parseFloat(stringNumber.split(".")[0]);
     const decimalDigits = stringNumber.split(".")[1];
     let integerDisplay;
     if (isNaN(integerDigits)) {
